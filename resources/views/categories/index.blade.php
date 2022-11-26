@@ -13,8 +13,7 @@
         <div>
             @foreach ($posts as $post)
                 <div style='border:solid 1px; margin-bottom: 10px;'>
-                    <p>
-                        タイトル：<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                    <p><a href="/posts/{{ $post->id }}">{{ $post->name }}</a>
                     </p>
                     <p>カテゴリー：<a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a></p>
                 </div>

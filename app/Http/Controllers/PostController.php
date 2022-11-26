@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Curriculum;
 
 class PostController extends Controller
 {
-    public function index(Post $post)
+    public function index(Curriculum $curriculum)
     {
-        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+        return view('posts/index')->with(['curriculums' => $curriculum->get()]);
     }
 
     public function show(Post $post)
@@ -20,7 +21,7 @@ class PostController extends Controller
 
     public function create(Category $category)
     {
-        return view('posts/create')->with(['categories' => $category->get()]);
+        return view('posts/create')->with(['curriculum' => $category->get()]);
     }
 
     public function store(Post $post, Request $request)
