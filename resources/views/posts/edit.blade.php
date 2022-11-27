@@ -21,5 +21,6 @@
                 <input type="submit" value="保存">
             </form>
         </div>
+        <div><a href="/">戻る</a></div>
     </body>
 </html>
