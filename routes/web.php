@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/categories/{curriculum}', [CurriculumController::class, 'index']);
     Route::delete('/posts/{review}', [CurriculumController::class,'delete']);
     Route::get('/reviews/{review}', [CurriculumController::class, 'showReview']);
+    Route::delete('/posts/{review}', [CurriculumController::class,'delete']);
 
     
 });

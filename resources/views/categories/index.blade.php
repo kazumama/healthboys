@@ -18,6 +18,6 @@
             @endforeach
         </div>
         <a href='/'>トップへ戻る</a>
-        
+
     </body>
 </html>

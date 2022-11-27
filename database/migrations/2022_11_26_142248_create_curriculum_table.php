@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name',50);
             $table->integer('vote_count')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
