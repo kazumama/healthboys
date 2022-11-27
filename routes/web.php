@@ -23,15 +23,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    Route::get('/', [CurriculumController::class, 'index']);
+    Route::get('/posts/create', [CurriculumController::class, 'create']);
+    Route::get('/posts/{curriculum}', [CurriculumController::class ,'show']);
+    Route::post('/posts', [CurriculumController::class, 'store']);
+    Route::get('/posts/{review}/edit', [CurriculumController::class, 'edit']);
+    Route::put('/posts/{review}', [CurriculumController::class, 'update']);
+    Route::get('/categories/{curriculum}', [CurriculumController::class, 'index']);
+    Route::delete('/posts/{review}', [CurriculumController::class,'delete']);
+    Route::get('/reviews/{review}', [CurriculumController::class, 'showReview']);
+
+    
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/', [CurriculumController::class, 'index']);
-Route::get('/posts/{post}', [CurriculumController::class ,'show']);
-Route::get('/posts/create', [CurriculumController::class, 'create']);
-Route::post('/posts', [CurriculumController::class, 'store']);
-Route::get('/posts/{post}/edit', [CurriculumController::class, 'edit']);
-Route::put('/posts/{post}', [CurriculumController::class, 'update']);
-Route::get('/categories/{curriculum}', [CurriculumController::class, 'index']);
-Route::delete('/posts/{post}', [CurriculumController::class,'delete']);

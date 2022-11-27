@@ -21,7 +21,7 @@
             <div>
                 <h2>カテゴリー</h2>
                 <select name="review[curriculum_id]">
-                    @foreach($curriculums as $curriculum)
+                    @foreach($curricula as $curriculum)
                         <option value="{{ $curriculum->id }}">{{ $curriculum->name }}</option>
                     @endforeach
                 </select>
