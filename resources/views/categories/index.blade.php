@@ -12,14 +12,12 @@
         <div>
             @foreach ($reviews as $review)
                 <div style='border:solid 1px; margin-bottom: 10px;'>
-                    <p><a href="/posts/{{ $review->id }}">{{ $review->name }}</a></p>
+                    <p><a href="/reviews/{{ $review->id }}">{{ $review->title }}</a></p>
                     
                 </div>
             @endforeach
         </div>
         <a href='/'>トップへ戻る</a>
-        <div>
-            {{ $posts->links() }}
-        </div>
+        
     </body>
 </html>
