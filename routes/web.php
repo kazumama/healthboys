@@ -33,5 +33,5 @@ Route::get('/posts/create', [CurriculumController::class, 'create']);
 Route::post('/posts', [CurriculumController::class, 'store']);
 Route::get('/posts/{post}/edit', [CurriculumController::class, 'edit']);
 Route::put('/posts/{post}', [CurriculumController::class, 'update']);
-Route::get('/categories/{category}', [CurriculumController::class, 'index']);
+Route::get('/categories/{curriculum}', [CurriculumController::class, 'index']);
 Route::delete('/posts/{post}', [CurriculumController::class,'delete']);
