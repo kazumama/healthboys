@@ -51,6 +51,12 @@ class CurriculumController extends Controller
     public function showReview(Review $review) {
         return view('posts/show')->with(['review' => $review]);
     }
+    
+    public function delete(Review $review)
+    {
+        $review->delete();
+        return redirect('/');
+    }
 
 
 }
