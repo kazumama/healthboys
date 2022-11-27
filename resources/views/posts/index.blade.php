@@ -11,17 +11,13 @@
         <h2>投稿一覧画面</h2>
         <a href='/posts/create'>新規投稿</a>
         <div>
-            @foreach ($curriculums as $curriculums)
+            @foreach ($curriculums as $curriculum)
                 <div style='border:solid 1px; margin-bottom: 10px;'>
                     <p>
                     　　<a href="/posts/{{ $curriculum->id }}">{{ $curriculum->name }}</a>
                     </p>
-                
                 </div>
             @endforeach
-        </div>
-        <div>
-            {{ $posts->links() }}
         </div>
     </body>
 </html>

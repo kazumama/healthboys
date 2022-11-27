@@ -7,7 +7,7 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\Curriculum;
 
-class PostController extends Controller
+class CurriculumController extends Controller
 {
     public function index(Curriculum $curriculum)
     {

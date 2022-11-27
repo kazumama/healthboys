@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\CurriculumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,6 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,11 +27,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [PostController::class, 'index']);
-Route::get('/posts/{post}', [PostController::class ,'show']);
-Route::get('/posts/create', [PostController::class, 'create']);
-Route::post('/posts', [PostController::class, 'store']);
-Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
-Route::put('/posts/{post}', [PostController::class, 'update']);
-Route::get('/categories/{category}', [PostController::class, 'index']);
-Route::delete('/posts/{post}', [PostController::class,'delete']);
+Route::get('/', [CurriculumController::class, 'index']);
+Route::get('/posts/{post}', [CurriculumController::class ,'show']);
+Route::get('/posts/create', [CurriculumController::class, 'create']);
+Route::post('/posts', [CurriculumController::class, 'store']);
+Route::get('/posts/{post}/edit', [CurriculumController::class, 'edit']);
+Route::put('/posts/{post}', [CurriculumController::class, 'update']);
+Route::get('/categories/{category}', [CurriculumController::class, 'index']);
+Route::delete('/posts/{post}', [CurriculumController::class,'delete']);
