@@ -32,7 +32,7 @@ class CurriculumController extends Controller
         $input = $request['review'];
         $review['user_id'] = Auth::id();
         $review->fill($input)->save();
-        return redirect('/posts/' . $review->id);
+        return redirect('/');
     }
 
     public function edit(Review $review)
@@ -45,7 +45,7 @@ class CurriculumController extends Controller
         $input_review = $request['review'];
         $review->fill($input_review)->save();
 
-        return redirect('/posts/' . $review->id);
+        return redirect('/');
     }
     
     public function showReview(Review $review) {
