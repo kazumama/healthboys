@@ -5,25 +5,24 @@
         <title>Blog</title>
     </head>
     <body>
-        <h1>チーム開発会へようこそ！</h1>
-        <h2>投稿作成</h2>
+        <h1>投稿作成</h1>
         <form action="/posts" method="POST">
             @csrf
             <div>
                 <h2>タイトル</h2>
-                <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
-                <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
+                <input type="text" name="review[title]" placeholder="エラー文orタイトル" value="{{ old('review.title') }}"/>
+                <p class="title__error" style="color:red">{{ $errors->first('review.title') }}</p>
             </div>
             <div>
                 <h2>本文</h2>
-                <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。">{{ old('post.body') }}</textarea>
-                <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
+                <textarea name="review[body]" placeholder="～を～のように変更したら直りました。">{{ old('review.body') }}</textarea>
+                <p class="body__error" style="color:red">{{ $errors->first('review.body') }}</p>
             </div>
             <div>
                 <h2>カテゴリー</h2>
-                <select name="post[category_id]">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                <select name="review[curriculum_id]">
+                    @foreach($curriculums as $curriculum)
+                        <option value="{{ $curriculum->id }}">{{ $curriculum->name }}</option>
                     @endforeach
                 </select>
             </div>

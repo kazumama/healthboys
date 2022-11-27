@@ -8,14 +8,14 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>詳細画面</h1>
+        <h1>投稿詳細画面</h1>
         <div>
-            <p>タイトル：{{ $post->title }}</p>
-            <p>本文：{{ $post->body }}</p>
-            <p>カテゴリー：<a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a></p>
+            <p>タイトル：{{ $review->title }}</p>
+            <p>本文：{{ $review->body }}</p>
+            <p>カテゴリー：<a href="/categories/{{ $review->curriculum->id }}">{{ $review->curriculum>name }}</a></p>
         </div>
         <div>
-            <p class="edit">[<a href="/posts/{{ $post->id }}/edit">編集</a>]</p>
+            <p class="edit">[<a href="/posts/{{ $review->id }}/edit">編集</a>]</p>
             <a href="/">戻る</a>
         </div>
     </body>
