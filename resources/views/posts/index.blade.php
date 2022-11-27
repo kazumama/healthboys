@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>エラーを解決しましょう！</h1>
-        <h2>投稿一覧画面</h2>
+        <h2>カリキュラム一覧画面</h2>
         <a href='/posts/create'>新規投稿</a>
         <div>
             @foreach ($curriculums as $curriculum)
