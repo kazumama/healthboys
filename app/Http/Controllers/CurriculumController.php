@@ -45,7 +45,7 @@ class CurriculumController extends Controller
         $input_review = $request['review'];
         $review->fill($input_review)->save();
 
-        return redirect('/posts/' . $review>id);
+        return redirect('/posts/' . $review->id);
     }
     
     public function showReview(Review $review) {
