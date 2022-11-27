@@ -12,7 +12,7 @@
         <div>
             <p>タイトル：{{ $review->title }}</p>
             <p>本文：{{ $review->body }}</p>
-            <p>カテゴリー：<a href="/categories/{{ $review->curriculum->id }}">{{ $review->curriculum>name }}</a></p>
+            <p>カテゴリー：<a href="/categories/{{ $review->curriculum->id }}">{{ $review->curriculum->name }}</a></p>
         </div>
         <div>
             <p class="edit">[<a href="/posts/{{ $review->id }}/edit">編集</a>]</p>
